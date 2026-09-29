@@ -1,0 +1,25 @@
+{
+  "goal": "Web real, no screenshot. Reference image is visual guide only.",
+  "desktop": {
+    "sectionMinHeight": "min(900px, 100svh) for hero; 680-820px for inner sections depending content",
+    "contentMaxWidth": "1180px",
+    "heroGrid": "left decor 26% / center content 48% / right decor 26%",
+    "familyGrid": "left decor 22% / parchment 56% / right decor 22%",
+    "countdownGrid": "left 22% / center 56% / right 22%",
+    "mapsGrid": "left 20% / center 58% / right 22%",
+    "rsvpGrid": "left 28% / center 44% / right 28%"
+  },
+  "mobile": {
+    "hero": "100svh; decor absolutely positioned, center content above",
+    "sideAssets": "position absolute; max-width 38-46vw; never force into document flow",
+    "mainContentWidth": "min(88vw, 560px)",
+    "buttons": "min-height 50px"
+  },
+  "characters": {
+    "heroHatter": "bottom:0; left:0",
+    "heroGirl": "bottom:0; right:0",
+    "heroCat": "top:0; right:0",
+    "mapCatQueen": "right:0; bottom:0",
+    "rsvpCat": "left:0; bottom:0"
+  }
+}

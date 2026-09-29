@@ -1,0 +1,54 @@
+:root{
+  --night-0:#070b12;
+  --night-1:#0e1626;
+  --night-2:#14243a;
+  --night-3:#203a57;
+  --pink:#d38bc8;
+  --pink-2:#c67ab8;
+  --purple:#9a5f94;
+  --copper:#b57a61;
+  --gold:#b79a62;
+  --paper:#e8d9c8;
+  --warm-white:#f3eee8;
+  --crimson:#7d1734;
+
+  --font-display:"Cinzel Decorative",serif;
+  --font-script:"Great Vibes",cursive;
+  --font-serif:"Cormorant Garamond",serif;
+
+  --glow-pink:
+    0 0 8px rgba(211,139,200,.55),
+    0 0 22px rgba(154,95,148,.36);
+
+  --section-bg:
+    radial-gradient(circle at 50% 10%, rgba(43,91,130,.46), transparent 36%),
+    radial-gradient(circle at 50% 80%, rgba(108,32,68,.18), transparent 42%),
+    linear-gradient(180deg,#102036 0%,#091522 56%,#070b12 100%);
+}
+
+.wonderland-section{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:var(--section-bg);
+  color:var(--warm-white);
+}
+.wonderland-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 10% 45%, rgba(104,18,52,.16), transparent 24%),
+    radial-gradient(circle at 90% 42%, rgba(66,97,130,.18), transparent 28%);
+  z-index:-1;
+}
+.magic-button{
+  border:1px solid rgba(248,192,231,.88);
+  border-radius:999px;
+  color:#f7edf4;
+  background:linear-gradient(180deg,rgba(126,63,112,.90),rgba(76,34,70,.94));
+  box-shadow:var(--glow-pink), inset 0 0 16px rgba(255,202,239,.14);
+  font:500 clamp(1.05rem,2.1vw,1.35rem)/1 var(--font-serif);
+  padding:.95em 1.9em;
+}

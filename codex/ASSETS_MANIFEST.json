@@ -1,0 +1,244 @@
+{
+  "assets": [
+    {
+      "file": "assets/hero/hero_left_decor.png",
+      "description": "Sombrerero, letreros, hongos y rosas del lado izquierdo de la portada.",
+      "size": [
+        255,
+        581
+      ]
+    },
+    {
+      "file": "assets/hero/hero_right_decor.png",
+      "description": "Gato superior, letreros, joven de espaldas y decoración derecha de la portada.",
+      "size": [
+        262,
+        581
+      ]
+    },
+    {
+      "file": "assets/hero/hero_hatter.png",
+      "description": "Sombrerero sentado, con parte del entorno para mezclarlo sobre fondo oscuro.",
+      "size": [
+        220,
+        336
+      ]
+    },
+    {
+      "file": "assets/hero/hero_girl.png",
+      "description": "Joven/vestido azul del lado derecho.",
+      "size": [
+        282,
+        386
+      ]
+    },
+    {
+      "file": "assets/hero/hero_cat.png",
+      "description": "Gato superior derecho.",
+      "size": [
+        197,
+        210
+      ]
+    },
+    {
+      "file": "assets/hero/hero_left_signs.png",
+      "description": "Letreros 'Aquí comienza un sueño...' y 'We're all mad here'.",
+      "size": [
+        205,
+        315
+      ]
+    },
+    {
+      "file": "assets/hero/hero_right_signs.png",
+      "description": "Letreros 'Sueña / Celebra / Brilla / Siempre'.",
+      "size": [
+        127,
+        290
+      ]
+    },
+    {
+      "file": "assets/hero/hero_bottom_path_texture.png",
+      "description": "Textura de camino/bosque inferior para mezclar con el fondo CSS.",
+      "size": [
+        250,
+        156
+      ]
+    },
+    {
+      "file": "assets/family/family_left_decor.png",
+      "description": "Conejo, sombrero, tazas, rosas y mesa izquierda.",
+      "size": [
+        205,
+        442
+      ]
+    },
+    {
+      "file": "assets/family/family_right_decor.png",
+      "description": "Castillo/jardín, pastel, tazas, rosas y letrero derecho.",
+      "size": [
+        207,
+        442
+      ]
+    },
+    {
+      "file": "assets/family/family_rabbit.png",
+      "description": "Conejo blanco del lado izquierdo.",
+      "size": [
+        145,
+        215
+      ]
+    },
+    {
+      "file": "assets/family/family_teaparty_left.png",
+      "description": "Mesa y tea party izquierda.",
+      "size": [
+        230,
+        262
+      ]
+    },
+    {
+      "file": "assets/family/family_teaparty_right.png",
+      "description": "Tea party derecha.",
+      "size": [
+        227,
+        272
+      ]
+    },
+    {
+      "file": "assets/family/family_parchment_clean.png",
+      "description": "Pergamino limpio sin texto, conservando marco/rosas alrededor.",
+      "size": [
+        415,
+        430
+      ]
+    },
+    {
+      "file": "assets/countdown/count_left_decor.png",
+      "description": "Conejo, hongos, reloj pequeño y cartel izquierdo.",
+      "size": [
+        190,
+        299
+      ]
+    },
+    {
+      "file": "assets/countdown/count_right_decor.png",
+      "description": "Hongos y letreros del lado derecho.",
+      "size": [
+        152,
+        299
+      ]
+    },
+    {
+      "file": "assets/countdown/count_rabbit.png",
+      "description": "Conejo blanco del contador.",
+      "size": [
+        175,
+        240
+      ]
+    },
+    {
+      "file": "assets/countdown/count_path_texture.png",
+      "description": "Camino central y bosque del contador.",
+      "size": [
+        375,
+        154
+      ]
+    },
+    {
+      "file": "assets/countdown/pocket_watch_clean.png",
+      "description": "Reloj de bolsillo limpio para repetir 4 veces; números/labels deben ser HTML.",
+      "size": [
+        104,
+        149
+      ]
+    },
+    {
+      "file": "assets/maps/maps_left_decor.png",
+      "description": "Cartas, corazones, rosas, hongos y letreros del lado izquierdo.",
+      "size": [
+        185,
+        418
+      ]
+    },
+    {
+      "file": "assets/maps/maps_right_decor.png",
+      "description": "Gato con sombrero, Reina Blanca, castillo, rosas y letrero derecho.",
+      "size": [
+        197,
+        418
+      ]
+    },
+    {
+      "file": "assets/maps/maps_cat_queen.png",
+      "description": "Gato con sombrero y Reina Blanca, juntos para preservar proporción.",
+      "size": [
+        192,
+        330
+      ]
+    },
+    {
+      "file": "assets/maps/maps_left_signs.png",
+      "description": "Letreros 'Lugares mágicos también existen'.",
+      "size": [
+        155,
+        260
+      ]
+    },
+    {
+      "file": "assets/maps/maps_right_sign.png",
+      "description": "Letrero 'Un gran día siempre encuentra su lugar...'.",
+      "size": [
+        152,
+        168
+      ]
+    },
+    {
+      "file": "assets/rsvp/rsvp_left_decor.png",
+      "description": "Gato grande, cartel, rosas y hongos izquierdos.",
+      "size": [
+        245,
+        308
+      ]
+    },
+    {
+      "file": "assets/rsvp/rsvp_right_decor.png",
+      "description": "Portal/castillo, cartas, hongos y letreros derechos.",
+      "size": [
+        237,
+        308
+      ]
+    },
+    {
+      "file": "assets/rsvp/rsvp_cat.png",
+      "description": "Gato grande de confirmar asistencia.",
+      "size": [
+        230,
+        205
+      ]
+    },
+    {
+      "file": "assets/rsvp/rsvp_portal.png",
+      "description": "Portal/castillo iluminado y cartas del lado derecho.",
+      "size": [
+        262,
+        245
+      ]
+    },
+    {
+      "file": "assets/hero/ornament_heart.png",
+      "description": "Ornamento central con corazón.",
+      "size": [
+        173,
+        60
+      ]
+    },
+    {
+      "file": "assets/hero/keyhole.png",
+      "description": "Cerradura de la portada.",
+      "size": [
+        96,
+        93
+      ]
+    }
+  ]
+}

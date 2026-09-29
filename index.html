@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#08131f">
+  <meta name="description" content="Acompaña a Regina Itzae a celebrar sus XV años el 1 de mayo de 2027.">
+  <title>XV años de Regina Itzae · Una noche en Wonderland</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="codex/theme_reference.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="is-locked">
+  <main>
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <div class="hero-artwork">
+        <img class="hero-image" src="assets/hero/portada-regina.png" alt="Portada de los XV años de Regina Itzae: un bosque encantado bajo la luna, con castillo, conejo blanco, rosas y una joven con vestido azul.">
+        <div class="hero-title-sparkles" aria-hidden="true"></div>
+        <h1 class="sr-only" id="hero-title">Mis XV años de Regina Itzae Avila Espinosa</h1>
+        <button class="artwork-hit artwork-open" id="open-invitation" type="button" aria-label="Abrir invitación" aria-pressed="false"></button>
+        <span class="sr-only" id="open-status" aria-live="polite"></span>
+      </div>
+    </section>
+    <div class="section-transition section-transition--cover" aria-hidden="true"><img class="section-divider" src="assets/sections/divisor_barroco_del_país_de_las_maravillas.png" alt=""></div>
+
+    <section class="wonderland-section family-art-section" id="family" aria-label="Padres, padrinos y fecha de los XV años de Regina Itzae">
+      <div class="family-artwork">
+        <img src="assets/sections/invitación_de_xv_años_en_wonderland.png" alt="Información de los XV años de Regina Itzae">
+      </div>
+    </section>
+
+    <div class="section-transition" aria-hidden="true"><img class="section-divider" src="assets/sections/divisor_barroco_del_país_de_las_maravillas.png" alt=""></div>
+
+    <section class="wonderland-section countdown-section" id="countdown" aria-labelledby="countdown-title">
+      <div class="section-inner countdown-inner">
+        <h2 class="sr-only" id="countdown-title">Faltan</h2>
+        <div class="countdown-artwork">
+          <img class="countdown-artwork-image" src="assets/sections/sendero_encantado_hacia_el_castillo_lunar.png" alt="Ilustración de la cuenta regresiva en un bosque encantado">
+          <div class="countdown-overlay" role="timer" aria-live="off" aria-label="Cuenta regresiva para el 10 de mayo de 2027">
+            <div class="countdown-watch watch-days">
+              <img src="assets/medallón_de_bolsillo_dorado_con_corazones_rojos-cropped.png" alt="">
+              <div class="watch-content"><span id="days" class="watch-number" data-clock="days">—</span><span class="watch-label" data-clock-label>Días</span></div>
+            </div>
+            <div class="countdown-watch watch-hours">
+              <img src="assets/medallón_de_bolsillo_dorado_con_corazones_rojos-cropped.png" alt="">
+              <div class="watch-content"><span id="hours" class="watch-number" data-clock="hours">—</span><span class="watch-label" data-clock-label>Horas</span></div>
+            </div>
+            <div class="countdown-watch watch-minutes">
+              <img src="assets/medallón_de_bolsillo_dorado_con_corazones_rojos-cropped.png" alt="">
+              <div class="watch-content"><span id="minutes" class="watch-number" data-clock="minutes">—</span><span class="watch-label" data-clock-label>Minutos</span></div>
+            </div>
+            <div class="countdown-watch watch-seconds">
+              <img src="assets/medallón_de_bolsillo_dorado_con_corazones_rojos-cropped.png" alt="">
+              <div class="watch-content"><span id="seconds" class="watch-number" data-clock="seconds">—</span><span class="watch-label" data-clock-label>Segundos</span></div>
+            </div>
+          </div>
+        </div>
+        <p class="sr-only">El gran día está por llegar…</p>
+      </div>
+    </section>
+    <div class="section-transition" aria-hidden="true"><img class="section-divider" src="assets/sections/divisor_barroco_del_país_de_las_maravillas.png" alt=""></div>
+
+    <section class="maps-section" id="locations" aria-labelledby="locations-title">
+      <img class="maps-background" src="assets/jardín_de_rosas_bajo_la_vía_láctea.png" alt="Jardín de rosas encantado bajo la Vía Láctea, con un sendero hacia un castillo">
+      <div class="maps-ui">
+        <div class="maps-card">
+          <h2 class="maps-title" id="locations-title"><img class="maps-custom-icon" src="assets/emblema_dorado_de_corazón_y_filigrana.png" alt=""><span>Mapas</span><img class="maps-custom-icon" src="assets/flourish_dorado_victoriano_con_corazón.png" alt=""></h2>
+          <div class="maps-tabs" role="tablist" aria-label="Elige una ubicación">
+            <button class="map-control ceremony-control is-active" id="ceremony-tab" type="button" role="tab" aria-label="Seleccionar ceremonia" aria-selected="true" data-location="ceremony">
+              <img class="maps-custom-icon" src="assets/capilla_gótica_de_bodas_encantada.png" alt=""><span>Ceremonia</span>
+            </button>
+            <button class="map-control reception-control" id="reception-tab" type="button" role="tab" aria-label="Seleccionar recepción" aria-selected="false" data-location="reception" tabindex="-1">
+              <img class="maps-custom-icon" src="assets/copas_de_champán_doradas_con_rosas_y_corazones.png" alt=""><span>Recepción</span>
+            </button>
+          </div>
+          <div class="maps-location-panel">
+            <iframe class="maps-embed" src="https://www.google.com/maps?q=19.4326,-99.1332&amp;z=13&amp;output=embed" title="Mapa interactivo de Ciudad de México" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <button class="map-control open-maps-control" id="open-maps" type="button" aria-label="Abrir en Maps" disabled>
+            <img class="maps-custom-icon" src="assets/emblema_dorado_de_mapa_y_ubicación.png" alt=""><span>Abrir en Maps</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <div class="section-transition" aria-hidden="true"><img class="section-divider" src="assets/sections/divisor_barroco_del_país_de_las_maravillas.png" alt=""></div>
+
+    <section class="wonderland-section invitation-guest-section" id="guest-pass" aria-labelledby="guest-pass-title">
+      <div class="guest-pass-inner">
+        <article class="guest-ticket" aria-label="Pase personalizado de invitación">
+          <span class="guest-ticket-kicker" id="guest-pass-title">Tu pase al País de las Maravillas</span>
+          <span class="guest-ticket-intro">Esta invitación está reservada para</span>
+          <span class="guest-name" id="guest-name">Familia invitada</span>
+          <div class="guest-pass-count" aria-label="Número de pases">
+            <span class="guest-passes-number" id="guest-passes">4</span>
+            <span class="guest-passes-label">PASES</span>
+          </div>
+          <span class="guest-ticket-note">Cada pase corresponde a una persona.</span>
+          <div class="guest-confirmation">
+            <h2 class="guest-confirmation-title">Confirmar asistencia</h2>
+            <div class="guest-confirmation-flourish" aria-hidden="true"><span>♥</span></div>
+            <p>Nos encantará saber si podrán acompañarnos en este día tan especial.</p>
+            <button class="guest-whatsapp-button" id="guest-confirm-whatsapp" type="button" disabled>
+              <img class="whatsapp-custom-icon" src="assets/sections/icono-whatsapp-gotico-rubies.png" alt="">
+              <span>Confirmar por WhatsApp</span>
+            </button>
+            <p class="guest-whatsapp-note" id="guest-whatsapp-note">El botón estará disponible cuando se configure el número de WhatsApp.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <div class="section-transition" aria-hidden="true"><img class="section-divider" src="assets/sections/divisor_barroco_del_país_de_las_maravillas.png" alt=""></div>
+
+    <section class="wonderland-section gallery-section" id="gallery" aria-label="Galería de fotos">
+      <div class="gallery-inner">
+        <h2 class="gallery-heading"><img src="assets/galeria/titulo-galeria.png" alt="Galería de Fotos"></h2>
+        <div class="gallery-carousel" role="group" aria-label="Carrusel de fotografías">
+          <div class="gallery-frame">
+            <img class="gallery-photo" id="gallery-photo" src="assets/jardín_de_rosas_bajo_la_vía_láctea.png" alt="Jardín de rosas bajo la Vía Láctea, imagen de muestra" draggable="false">
+            <img class="gallery-frame-overlay" src="assets/galeria/marco-fotografia.png" alt="" aria-hidden="true">
+          </div>
+          <button class="gallery-control gallery-previous" id="gallery-previous" type="button" aria-label="Fotografía anterior">
+            <img src="assets/galeria/anterior.png" alt="" aria-hidden="true">
+          </button>
+          <button class="gallery-control gallery-next" id="gallery-next" type="button" aria-label="Fotografía siguiente">
+            <img src="assets/galeria/siguiente.png" alt="" aria-hidden="true">
+          </button>
+        </div>
+      </div>
+    </section>
+    <div class="section-transition" aria-hidden="true"><img class="section-divider" src="assets/sections/divisor_barroco_del_país_de_las_maravillas.png" alt=""></div>
+
+    <section class="wonderland-section gift-section" id="gift-table" aria-labelledby="gift-table-title">
+      <div class="gift-inner">
+        <h2 class="gift-heading" id="gift-table-title"><img src="assets/regalos/titulo-mesa-regalos.png" alt="Mesa de Regalos"></h2>
+        <div class="gift-intro">
+          <p class="gift-lead">Tu presencia es nuestro mejor regalo...</p>
+          <p class="gift-copy">Pero si deseas obsequiarnos algo más, hemos preparado estas opciones con mucho cariño.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="config.js"></script>
+  <script src="hero.js"></script>
+  <script src="app.js"></script>
+  <button class="music-toggle" id="music-toggle" type="button" aria-label="Reproducir música" aria-pressed="false">
+    <img src="assets/music/emblema-musical-dorado-con-rosas-y-zafiros.png" alt="" aria-hidden="true">
+  </button>
+  <audio id="invitation-music" src="assets/music/once-upon-a-dream-lana-del-rey.mp3" preload="auto" loop></audio>
+  <script src="music.js"></script>
+  <script src="effects.js"></script>
+</body>
+</html>
