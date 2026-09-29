@@ -89,7 +89,6 @@ body.is-locked main > :not(#hero) { display: none !important; }
 .family-art-section::before, .family-art-section::after { display: none; }
 .family-artwork { position: relative; z-index: 1; left: auto; right: auto; width: min(100vw, 56.28svh); max-width: 100%; margin-inline: auto; padding-inline: 0; line-height: 0; transform: none; }
 .family-artwork img { display: block; width: 100%; max-width: 100%; height: auto; margin: 0; padding: 0; object-fit: contain; }
-.family-date-correction { position: absolute; top: 65.9%; left: 31.5%; z-index: 2; display: grid; width: 37%; height: 3.8%; place-items: center; background: radial-gradient(ellipse, #f6e9d6 0%, #f3e3cd 72%, rgba(243, 227, 205, .98) 100%); color: #170d08; font-family: Georgia, "Times New Roman", serif; font-size: clamp(10px, min(4vw, 2.25svh), 38px); font-weight: 700; line-height: 1; white-space: nowrap; }
 .godparent-heading { margin-top: .25rem !important; }
 .text-link { display: inline-flex; align-items: center; gap: .7rem; color: var(--ice); font-size: 1rem; letter-spacing: .07em; text-decoration: none; }
 .text-link span { font-size: 1.3em; }
