@@ -77,6 +77,11 @@
   const locations = { ceremony: config.ceremony || {}, reception: config.reception || {} };
   const tabs = [...document.querySelectorAll("[data-location]")];
   const mapsButton = document.getElementById("open-maps");
+  const mapsEmbed = document.querySelector(".maps-embed");
+  const mapsLocationDetails = document.getElementById("maps-location-details");
+  const mapsPlaceName = document.getElementById("maps-place-name");
+  const mapsPlaceTime = document.getElementById("maps-place-time");
+  const defaultMapsEmbedUrl = mapsEmbed?.getAttribute("src") || "";
   let currentLocation = "ceremony";
 
   function setLocation(key) {
@@ -91,6 +96,21 @@
     });
     const hasMapsUrl = /^https?:\/\//i.test(location.mapsUrl?.trim() || "");
     mapsButton.disabled = !hasMapsUrl;
+    if (mapsEmbed) {
+      if (key === "reception" && location.mapCenter) {
+        mapsEmbed.src = `https://maps.google.com/maps?ll=${encodeURIComponent(location.mapCenter)}&z=16&output=embed`;
+      } else {
+        mapsEmbed.src = defaultMapsEmbedUrl;
+      }
+      mapsEmbed.title = key === "reception" ? "Mapa de Salón Videmar en Tulancingo de Bravo, Hidalgo" : "Mapa de la ceremonia en Ciudad de México";
+    }
+    if (mapsLocationDetails) {
+      mapsLocationDetails.hidden = key !== "reception";
+      if (key === "reception") {
+        if (mapsPlaceName) mapsPlaceName.textContent = location.name || "";
+        if (mapsPlaceTime) mapsPlaceTime.textContent = location.time || "";
+      }
+    }
   }
 
   tabs.forEach((tab, index) => {
@@ -117,11 +137,9 @@
   });
 
   const guestWhatsappButton = document.getElementById("guest-confirm-whatsapp");
-  const guestWhatsappNote = document.getElementById("guest-whatsapp-note");
   const WHATSAPP_NUMBER = String(config.whatsapp?.number || "").replace(/\D/g, "");
   const hasGuestWhatsappNumber = WHATSAPP_NUMBER.length >= 10;
   if (guestWhatsappButton) guestWhatsappButton.disabled = !hasGuestWhatsappNumber;
-  if (hasGuestWhatsappNumber && guestWhatsappNote) guestWhatsappNote.textContent = "Se abrirá WhatsApp con un mensaje listo para enviar.";
   guestWhatsappButton?.addEventListener("click", () => {
     if (!hasGuestWhatsappNumber) return;
     const name = document.getElementById("guest-name")?.textContent?.trim() || "";
@@ -130,31 +148,4 @@
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank", "noopener,noreferrer");
   });
 
-  // Imágenes de muestra: sustituir estas rutas por las fotos definitivas cuando estén disponibles.
-  const galleryImages = [
-    { src: "assets/jardín_de_rosas_bajo_la_vía_láctea.png", alt: "Jardín de rosas bajo la Vía Láctea, imagen de muestra" },
-    { src: "assets/sections/pases-confirmacion-fondo.png", alt: "Jardín fantástico de noche, imagen de muestra" },
-    { src: "assets/sections/sendero_encantado_hacia_el_castillo_lunar.png", alt: "Sendero encantado hacia el castillo lunar, imagen de muestra" }
-  ];
-  const galleryPhoto = document.getElementById("gallery-photo");
-  const galleryPrevious = document.getElementById("gallery-previous");
-  const galleryNext = document.getElementById("gallery-next");
-  let currentGalleryIndex = 0;
-  let galleryFadeTimer;
-
-  function showGalleryImage(nextIndex) {
-    if (!galleryPhoto || !galleryImages.length) return;
-    currentGalleryIndex = (nextIndex + galleryImages.length) % galleryImages.length;
-    const image = galleryImages[currentGalleryIndex];
-    galleryPhoto.classList.add("is-fading");
-    window.clearTimeout(galleryFadeTimer);
-    galleryFadeTimer = window.setTimeout(() => {
-      galleryPhoto.src = image.src;
-      galleryPhoto.alt = image.alt;
-      window.requestAnimationFrame(() => galleryPhoto.classList.remove("is-fading"));
-    }, 205);
-  }
-
-  galleryPrevious?.addEventListener("click", () => showGalleryImage(currentGalleryIndex - 1));
-  galleryNext?.addEventListener("click", () => showGalleryImage(currentGalleryIndex + 1));
 })();

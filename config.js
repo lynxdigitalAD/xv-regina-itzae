@@ -18,13 +18,13 @@ window.INVITATION_CONFIG = {
     mapsUrl: "https://maps.app.goo.gl/E56MP81HeDy8XWKB7"
   },
   reception: {
-    name: "Ciudad de México",
-    address: "Ciudad de México",
-    time: "Hora por confirmar",
-    mapsUrl: "https://maps.app.goo.gl/E56MP81HeDy8XWKB7"
+    name: "Salón Videmar",
+    mapCenter: "20.0798334,-98.3732108",
+    time: "8:00 p. m.",
+    mapsUrl: "https://maps.app.goo.gl/tbb9czMRa5xrhtgKA"
   },
   whatsapp: {
-    number: "",
+    number: "525520324916",
     message: "Hola, confirmo mi asistencia a los XV años de Regina Itzae."
   },
   music: {

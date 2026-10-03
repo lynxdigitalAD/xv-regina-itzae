@@ -136,6 +136,13 @@ body.is-locked main > :not(#hero) { display: none !important; }
 .maps-pin { width: clamp(1.8rem, 7vw, 2.45rem); height: clamp(1.8rem, 7vw, 2.45rem); fill: none; stroke: #102d60; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
 .maps-location-panel h3 { margin: 0; font-family: var(--font-serif); font-size: clamp(1.2rem, 4.5vw, 1.8rem); font-weight: 600; line-height: 1.1; }
 .maps-location-panel p { max-width: 32rem; margin: 0; font-family: var(--font-serif); font-size: clamp(1rem, 3.6vw, 1.28rem); font-weight: 500; line-height: 1.25; }
+.maps-location-details { display: grid; justify-items: center; gap: .42rem; width: 100%; margin-bottom: .35rem; }
+.maps-location-details[hidden] { display: none; }
+.maps-location-details h3 { font-size: clamp(1.5rem, 5.2vw, 2rem); line-height: 1.05; }
+.maps-location-details p { max-width: none; font-size: clamp(1.12rem, 4.3vw, 1.28rem); line-height: 1.12; }
+.maps-location-time { display: flex; align-items: center; justify-content: center; gap: .4rem; font-weight: 600 !important; }
+.maps-location-time #maps-place-time { color: #91651f; font-family: var(--font-display); font-size: clamp(1.05rem, 3.9vw, 1.33rem); font-weight: 700; letter-spacing: .025em; line-height: 1.08; text-shadow: 0 1px 0 rgba(255, 248, 220, .75), 0 0 8px rgba(157, 111, 37, .24); }
+.maps-clock-icon { display: block; flex: 0 0 auto; width: clamp(24px, 7vw, 28px); height: clamp(24px, 7vw, 28px); object-fit: contain; }
 .maps-embed { display: block; width: 100%; height: 310px; border: 0; border-radius: 14px; }
 .open-maps-control { min-height: 3.25rem; border-radius: 18px 10px 18px 10px / 10px 18px 10px 18px; border-color: #9a794a; color: #f0e5d2; background: linear-gradient(155deg, #1b303c, #07131e); box-shadow: 0 6px 14px rgba(0, 0, 0, .42), inset 0 0 0 2px rgba(5, 10, 16, .55), inset 0 0 15px rgba(163, 117, 62, .12); font-size: clamp(1rem, 4vw, 1.3rem); letter-spacing: .015em; }
 .open-maps-control::before, .open-maps-control::after { color: #d0aa6d; font-size: .78rem; }
@@ -143,16 +150,10 @@ body.is-locked main > :not(#hero) { display: none !important; }
 .maps-button { margin-top: 1.25rem; }
 @media (min-width: 760px) { .maps-embed { height: 340px; } }
 
-.gallery-section { background: radial-gradient(ellipse at 50% 50%, rgba(39, 76, 108, .26), transparent 52%), linear-gradient(180deg, #07111d, #0a1522 50%, #080e17); }
-.gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(.7rem, 2.5vw, 1.5rem); width: min(100%, 790px); margin: 0 auto; }
-.memory-frame { position: relative; display: grid; min-height: clamp(170px, 34vw, 275px); place-content: center; gap: 1rem; overflow: hidden; border: 1px solid rgba(181, 148, 102, .62); outline: 1px solid rgba(181, 148, 102, .2); outline-offset: 4px; color: #c1d2e0; background: radial-gradient(ellipse at 50% 42%, rgba(56, 101, 136, .29), transparent 55%), linear-gradient(155deg, rgba(16, 37, 59, .96), rgba(5, 12, 20, .96)); box-shadow: inset 0 0 26px rgba(143, 216, 255, .07), 0 12px 28px rgba(0, 0, 0, .26); font-size: clamp(1rem, 2.6vw, 1.3rem); font-style: italic; transition: transform .25s ease, box-shadow .25s ease; }
-.memory-frame::before, .memory-frame::after { position: absolute; width: 1.5rem; height: 1.5rem; content: ""; border-color: rgba(198, 160, 108, .8); border-style: solid; }
-.memory-frame::before { top: .5rem; left: .5rem; border-width: 1px 0 0 1px; }
-.memory-frame::after { right: .5rem; bottom: .5rem; border-width: 0 1px 1px 0; }
-.memory-frame:hover { transform: translateY(-4px); box-shadow: inset 0 0 30px rgba(143, 216, 255, .12), 0 16px 34px rgba(0, 0, 0, .36); }
-.memory-star { color: var(--ice); font-size: 1.6rem; text-shadow: 0 0 14px rgba(143, 216, 255, .65); }
-.gallery-note { margin: 2rem 0 0; color: #9aabbd; font-size: 1.1rem; font-style: italic; }
 
+
+.dress-code-section { position: relative; isolation: isolate; left: 50%; width: min(100vw, 56.28svh); max-width: none; margin: 0; padding: 0; transform: translateX(-50%); overflow: hidden; background: #081929; }
+.dress-code-background { display: block; width: 100%; height: auto; }
 
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
@@ -164,14 +165,6 @@ body.is-locked main > :not(#hero) { display: none !important; }
   .wonderland-section::before { inset: .6rem; }
   .eyebrow { font-size: .59rem; letter-spacing: .17em; }
   .artwork-open { left: 23%; width: 54%; }
-  .memory-frame { min-height: 155px; }
-  .memory-frame::before { top: .3rem; left: .3rem; width: 1rem; height: 1rem; }
-  .memory-frame::after { right: .3rem; bottom: .3rem; width: 1rem; height: 1rem; }
-}
-
-@media (max-width: 380px) {
-  .gallery-grid { gap: .55rem; }
-  .memory-frame { min-height: 138px; padding: .35rem; font-size: .92rem; }
 }
 
 @media (min-width: 1100px) {
@@ -213,58 +206,14 @@ body.is-locked main > :not(#hero) { display: none !important; }
 .guest-whatsapp-button:disabled { opacity: .82; cursor: not-allowed; }
 .whatsapp-custom-icon { display: block; flex: 0 0 48px; width: 48px; height: 48px; margin-block: -.46rem; object-fit: contain; }
 
-.guest-whatsapp-note { margin: .55rem 0 0 !important; color: #9eabac !important; font-size: clamp(.88rem, 3.2vw, 1rem) !important; font-style: italic; }
 @media (max-width: 380px) {
   .guest-ticket { width: 94%; padding-inline: .85rem; }
   .guest-whatsapp-button { width: 100%; }
 }
-/* Galería con los recursos ornamentales proporcionados. */
-.gallery-section { position: relative; isolation: isolate; left: 50%; width: min(100vw, 56.28svh); max-width: none; aspect-ratio: 941 / 1671; margin: 0; padding: clamp(1rem, 2.5vh, 1.5rem) .5rem; transform: translateX(-50%); overflow: hidden; background: #07111d url("assets/galeria/reina_etérea_bajo_la_luna_llena.png") center / cover no-repeat; color: #f0e6d3; text-align: center; }
-.gallery-section::before, .gallery-section::after { display: none; }
-.gallery-inner { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; width: 100%; max-width: none; margin: 0 auto; }
-.gallery-heading { position: relative; left: 17%; align-self: center; width: 42%; max-width: 260px; margin: clamp(1rem, 2.5vh, 1.5rem) 0 .45rem; line-height: 0; }
-.gallery-heading img { display: block; width: 100%; height: auto; object-fit: contain; }
-.gallery-carousel { position: relative; display: flex; align-items: center; justify-content: center; width: 100%; margin-inline: auto; transform: translateY(-.5rem); }
-.gallery-frame { position: relative; isolation: isolate; width: min(68vw, 410px, calc(100% - 96px)); max-width: 470px; aspect-ratio: 941 / 1672; margin-inline: auto; }
-.gallery-photo { position: absolute; z-index: 1; top: 16%; left: 16.5%; display: block; width: 67%; height: 66.5%; border-radius: 1.5%; object-fit: cover; object-position: center; opacity: 1; scale: 1; transition: opacity .205s ease, scale .205s ease; }
-.gallery-photo.is-fading { opacity: 0; scale: 1.02; }
-.gallery-frame-overlay { position: absolute; inset: 0; z-index: 2; display: block; width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
-.gallery-control { position: absolute; top: 50%; z-index: 3; display: grid; place-items: center; width: 48px; height: 48px; padding: 0; border: 0; border-radius: 50%; background: transparent; cursor: pointer; transform: translateY(-50%); -webkit-tap-highlight-color: transparent; }
-.gallery-control img { display: block; width: 100%; height: 100%; object-fit: contain; }
-.gallery-control:focus-visible { outline: 2px solid #d8bb82; outline-offset: 2px; }
-.gallery-previous { left: max(0px, calc(50% - min(34vw, 205px) - 52px)); }
-.gallery-next { right: max(0px, calc(50% - min(34vw, 205px) - 52px)); }
-@media (max-width: 380px) {
-  .gallery-heading { width: 42%; }
-  .gallery-control { width: 46px; height: 46px; }
-  .gallery-previous { left: max(0px, calc(50% - min(34vw, 205px) - 50px)); }
-  .gallery-next { right: max(0px, calc(50% - min(34vw, 205px) - 50px)); }
-}
-@media (min-width: 760px) {
-  .gallery-heading { width: 40%; margin-top: clamp(1rem, 2vh, 1.5rem); margin-bottom: .5rem; }
-  .gallery-carousel { transform: translateY(-.75rem); }
-  .gallery-frame { width: min(76vw, 410px, calc(100% - 132px)); }
-  .gallery-control { width: 60px; height: 60px; }
-  .gallery-previous { left: max(0px, calc(50% - min(38vw, 205px) - 66px)); }
-.gallery-next { right: max(0px, calc(50% - min(38vw, 205px) - 66px)); }
-}
-
-/* Mesa de regalos con el escenario y emblemas proporcionados. */
-.gift-section { position: relative; isolation: isolate; left: 50%; display: flex; align-items: flex-start; justify-content: center; width: min(100vw, 56.28svh); max-width: none; aspect-ratio: 941 / 1672; margin: 0; padding: clamp(1rem, 3vw, 1.5rem) .75rem; overflow: hidden; transform: translateX(-50%); background: #080b12 linear-gradient(180deg, rgba(4, 8, 14, .12), rgba(4, 8, 14, .16)) center / cover no-repeat; background-image: linear-gradient(180deg, rgba(4, 8, 14, .1), rgba(4, 8, 14, .18)), url("assets/regalos/reina_roja_en_terraza_de_ensueño.png"); background-size: cover; background-position: center; color: #f3e7d5; text-align: center; }
+/* Mesa de regalos: la imagen ya incluye todo el contenido de la sección. */
+.gift-section { position: relative; isolation: isolate; left: 50%; width: min(100vw, 56.28svh); max-width: none; margin: 0; padding: 0; transform: translateX(-50%); background: #080b12; }
 .gift-section::before, .gift-section::after { display: none; }
-.gift-inner { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 900px; margin: 0 auto; }
-.gift-heading { width: 84%; max-width: 450px; margin: 0 auto .15rem; line-height: 0; }
-.gift-heading img { display: block; width: 100%; height: auto; object-fit: contain; }
-.gift-intro { width: min(100%, 46rem); margin: 0 auto; padding: 0 .3rem; text-shadow: 0 2px 7px rgba(0, 0, 0, .95), 0 0 14px rgba(0, 0, 0, .8); }
-.gift-lead { margin: 0 0 .2rem; color: #f5e7d2; font-family: var(--font-display); font-size: clamp(.92rem, 3.6vw, 1.18rem); line-height: 1.2; }
-.gift-copy { max-width: 42rem; margin: 0 auto; color: #f0e5d8; font-size: clamp(.92rem, 3.35vw, 1.12rem); line-height: 1.24; }
-@media (max-width: 380px) {
-  .gift-section { padding-inline: .55rem; }
-}
-@media (min-width: 760px) {
-  .gift-section { padding-top: 1.6rem; }
-  .gift-heading { width: 86%; }
-}
+.gift-section-image { display: block; width: 100%; height: auto; }
 
 /* Control flotante para la música de la invitación. */
 .music-toggle { position: fixed; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); z-index: 1000; display: grid; place-items: center; width: 68px; height: 68px; padding: 0; border: 0; border-radius: 50%; background: transparent; cursor: pointer; -webkit-tap-highlight-color: transparent; filter: drop-shadow(0 3px 8px rgba(0, 0, 0, .72)) drop-shadow(0 0 5px rgba(204, 157, 76, .2)); transition: transform .22s ease, filter .22s ease; }
@@ -315,13 +264,11 @@ body.is-locked main > :not(#hero) { display: none !important; }
   100% { opacity: 0; }
 }
 
-/* Transiciones preexistentes de galería y controles táctiles. */
-.gallery-photo { transition-duration: .205s; }
-.gallery-control, .map-control, .guest-whatsapp-button, .artwork-open, .music-toggle { transition-property: transform, scale, filter, box-shadow, background-color, border-color; transition-duration: .2s; transition-timing-function: ease; }
-.gallery-control:active, .map-control:active:not(:disabled), .guest-whatsapp-button:active:not(:disabled), .artwork-open:active, .music-toggle:active { scale: .96; }
+/* Transiciones táctiles de controles interactivos. */
+.map-control, .guest-whatsapp-button, .artwork-open, .music-toggle { transition-property: transform, scale, filter, box-shadow, background-color, border-color; transition-duration: .2s; transition-timing-function: ease; }
+.map-control:active:not(:disabled), .guest-whatsapp-button:active:not(:disabled), .artwork-open:active, .music-toggle:active { scale: .96; }
 @media (hover: hover) and (pointer: fine) {
   .map-control:hover:not(:disabled), .guest-whatsapp-button:hover:not(:disabled) { scale: 1.02; filter: brightness(1.06); }
-  .gallery-control:hover { scale: 1.04; filter: brightness(1.08); }
 }
 
 @media (prefers-reduced-motion: reduce) {
