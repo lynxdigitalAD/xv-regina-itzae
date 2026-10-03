@@ -21,7 +21,7 @@ window.INVITATION_CONFIG = {
   reception: {
     name: "Salón Videmar",
     mapCenter: "20.0798334,-98.3732108",
-    time: "8:00 p. m.",
+    time: "7:30 p. m.",
     mapsUrl: "https://maps.app.goo.gl/tbb9czMRa5xrhtgKA"
   },
   whatsapp: {
