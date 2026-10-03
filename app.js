@@ -29,7 +29,41 @@
   const clockSlots = Object.fromEntries(
     ["days", "hours", "minutes", "seconds"].map((unit) => [unit, document.querySelector(`[data-clock="${unit}"]`)])
   );
-  const targetTime = Date.parse(event.dateTime || "");
+  function zonedDateTimeToTimestamp(dateTime, timeZone) {
+    const match = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2}):(\d{2})$/.exec(dateTime || "");
+    if (!match) return NaN;
+
+    const [, year, month, day, hour, minute, second] = match.map(Number);
+    const targetUtc = Date.UTC(year, month - 1, day, hour, minute, second);
+    const formatter = new Intl.DateTimeFormat("en-US", {
+      timeZone,
+      calendar: "gregory",
+      numberingSystem: "latn",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      hourCycle: "h23"
+    });
+    let timestamp = targetUtc;
+
+    for (let attempt = 0; attempt < 2; attempt += 1) {
+      const parts = Object.fromEntries(formatter.formatToParts(new Date(timestamp)).map(({ type, value }) => [type, value]));
+      const displayedAsUtc = Date.UTC(
+        Number(parts.year), Number(parts.month) - 1, Number(parts.day),
+        Number(parts.hour), Number(parts.minute), Number(parts.second)
+      );
+      timestamp += targetUtc - displayedAsUtc;
+    }
+
+    return timestamp;
+  }
+
+  const targetTime = event.timeZone
+    ? zonedDateTimeToTimestamp(event.dateTime, event.timeZone)
+    : Date.parse(event.dateTime || "");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
   function setCountdownValue(slot, nextValue) {

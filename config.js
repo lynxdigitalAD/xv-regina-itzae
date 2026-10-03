@@ -3,8 +3,9 @@ window.INVITATION_CONFIG = {
     fullName: "Regina Itzae Avila Espinosa",
     displayName: "Regina Itzae",
     surname: "Avila Espinosa",
-    // Fecha correcta del evento. Hora temporal; actualizar cuando la clienta confirme la hora exacta de la ceremonia.
-    dateTime: "2027-05-01T00:00:00-06:00",
+    // Fecha y hora definitivas de la ceremonia, expresadas en la zona horaria del evento.
+    dateTime: "2027-05-01T18:00:00",
+    timeZone: "America/Mexico_City",
     parents: ["Oscar Jeferson Avila Garcia", "Magali Samantha Espinosa Pérez"],
     godparents: ["José Antonio Rodríguez Elizarrarás", "Ma. del Rosario García Tapia"]
   },
