@@ -154,6 +154,8 @@ body.is-locked main > :not(#hero) { display: none !important; }
 
 .dress-code-section { position: relative; isolation: isolate; left: 50%; width: min(100vw, 56.28svh); max-width: none; margin: 0; padding: 0; transform: translateX(-50%); overflow: hidden; background: #081929; }
 .dress-code-background { display: block; width: 100%; height: auto; }
+.itinerary-section { position: relative; isolation: isolate; left: 50%; width: min(100vw, 56.28svh); max-width: none; margin: 0; padding: 0; transform: translateX(-50%); background: #081929; }
+.itinerary-image { display: block; width: 100%; height: auto; }
 
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
