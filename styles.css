@@ -164,6 +164,12 @@ body.is-locked main > :not(#hero) { display: none !important; }
   .family-art-section { padding-inline: 0; overflow: visible; }
   .family-artwork { width: 100%; max-width: 100%; margin-inline: 0; }
   .family-artwork img { width: 100%; height: auto; object-fit: contain; object-position: center; }
+  .hero-artwork,
+  .countdown-artwork,
+  .maps-section,
+  .itinerary-section,
+  .dress-code-section,
+  .gift-section { width: 100%; max-width: 100%; }
   .wonderland-section::before { inset: .6rem; }
   .eyebrow { font-size: .59rem; letter-spacing: .17em; }
   .artwork-open { left: 23%; width: 54%; }
