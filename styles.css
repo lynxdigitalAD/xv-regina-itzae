@@ -308,3 +308,17 @@ body.is-locked main > :not(#hero) { display: none !important; }
   .hero-title-sparkles::before, .title-sparkle, .title-sparkle::before, .title-sparkle::after { animation: none !important; }
   .title-sparkle { display: none; }
 }
+
+/* En móvil, todas las secciones ilustradas comparten el ancho completo disponible. */
+@media (max-width: 640px) {
+  .hero-artwork,
+  .family-artwork,
+  .countdown-artwork,
+  .maps-section,
+  .itinerary-section,
+  .dress-code-section,
+  .gift-section,
+  .invitation-guest-section,
+  .section-transition { width: 100%; max-width: 100%; }
+  .countdown-section { padding-inline: 0; }
+}
